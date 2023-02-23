@@ -9,7 +9,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<!-- Additoinal meta info defined in child templates -->
-		{% block meta %}{% endblock %}
+		<!-- Title must be defined in child templates -->
+		{% block meta required %}{% endblock %}
 
 	</head>
 
@@ -21,12 +22,19 @@
 		<header class="text-primary">Skump's Website</header>
 
 		<!-- Navigation bar -->
-		<nav class="navbar">{% block nav required %}{% endblock %}</nav>
+		<nav class="navbar">
+			<!-- iterates over all items in navigation var (supplied by flask) -->
+			<!-- navigation item will have href (link to page) and a given title -->
+			<!-- need to clarify what item will actually be in python implementation -->
+			{{% for item in navigation %}}
+			<li><a href="{{ item.href }}">{{ item.title }}</a></li>
+			{{% endfor %}}
+		</nav>
 
 		<!-- Content goes here -->
 		<main>{% block main %}{% endblock %}</main>
 
 		<!-- Use one footer template per website -->
-		<footer>{% block footer required %}{% endblock %}</footer>
+		<footer>{% block footer %}{% endblock %}</footer>
 	</body>
 </html>
