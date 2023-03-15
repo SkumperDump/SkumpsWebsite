@@ -9,8 +9,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<!-- Additoinal meta info defined in child templates -->
+		{% block meta %}{% endblock %}
+
 		<!-- Title must be defined in child templates -->
-		{% block meta required %}{% endblock %}
+		{% block title required %}{% endblock %}
 
 	</head>
 
@@ -19,22 +21,21 @@
 		<!-- Bootstrap JavaScript -->
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 
-		<header class="text-primary">Skump's Website</header>
-
-		<!-- Navigation bar -->
-		<nav class="navbar">
-			<!-- iterates over all items in navigation var (supplied by flask) -->
-			<!-- navigation item will have href (link to page) and a given title -->
-			<!-- need to clarify what item will actually be in python implementation -->
-			{{% for item in navigation %}}
-			<li><a href="{{ item.href }}">{{ item.title }}</a></li>
-			{{% endfor %}}
-		</nav>
+		<header>
+			<!-- Navigation bar -->
+			<nav class="nav nav-tabs">
+				{% for item in navigation %}
+				<a class="nav-item nav-link" href={{ url_for(item) }}>{{ item }}</a>
+				{% endfor %}
+			</nav>
+		</header>
 
 		<!-- Content goes here -->
 		<main>{% block main %}{% endblock %}</main>
 
-		<!-- Use one footer template per website -->
-		<footer>{% block footer %}{% endblock %}</footer>
+		<footer>
+			<div>Philip Scott Wallace</div>
+			<div>Contact me at: <a href="mailto:newemail@newemail.com">philipswallace1@gmail.com</a></div>
+		</footer>
 	</body>
 </html>

@@ -1,13 +1,21 @@
-import os
+import markdown, utils
+from flask import (Flask, render_template)
 
-from flask import Flask
-from flask import render_template
+nav_list = ['homepage', 'projects', 'blog']
 
-def create_app():
-    app = Flask(__name__)
+app = Flask(__name__)
 
-    @app.route('/')
-    def homepage():
-        return render_template("index.html")
+@app.route('/')
+def homepage():
+    # markdown -> html
+    # need to use {{FOO | safe}} in jinja template to prevent auto-escaping
+    content = utils.open_file("app/static/md/index.md")
+    return render_template("index.html", navigation=nav_list, content=markdown.markdown(content))
 
-    return app
+@app.route('/projects')
+def projects():
+    return render_template("projects.html", navigation=nav_list)
+
+@app.route('/blog')
+def blog():
+    return render_template("blog.html", navigation=nav_list)

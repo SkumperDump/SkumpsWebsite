@@ -1,14 +1,12 @@
 {% extends "base.html" %}
 
-<!-- Title and additoinal meta tags here -->
-{% block meta %}
+{% block title %}
 <title>Home Page</title>
 {% endblock %}
 
 <!-- Content goes here -->
 {% block main %}
 <div>
-	<h1>Cover Letter</h1>
-	<p>Cover letter content</p>
+  {{ content | safe}}
 </div>
 {% endblock %}
