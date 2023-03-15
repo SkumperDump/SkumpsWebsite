@@ -1,53 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Additoinal meta info defined in child templates -->
-    {% block meta %}{% endblock %}
-
-    <!-- Title must be defined in child templates -->
-    {% block title required %}{% endblock %}
-
-  </head>
-
-  <body>
-
-    <!-- Bootstrap JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-
-    <header>
-      <!-- Navigation bar -->
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Skumps Website</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNav"aria-expanded="false" aria-controls="collapseNav" aria-label="Navigation toggle">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="collapseNav">
-            <ul class="navbar-nav me-auto">
-              {% for item in navigation %}
-              <li class="nav-item">
-                <a class="nav-link" href={{ url_for(item) }}>{{ item }}</a>
-              </li>
-              {% endfor %}
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
-
-    <!-- Content goes here -->
-    <main>{% block main %}{% endblock %}</main>
-
-    <footer>
-      <div>Philip Scott Wallace</div>
-      <div>Contact me at: <a href="mailto:newemail@newemail.com">philipswallace1@gmail.com</a></div>
-    </footer>
-  </body>
+    <head>
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Additoinal meta info defined in child templates -->
+        {% block meta %}{% endblock %}
+        <!-- Title must be defined in child templates -->
+        {% block title required %}{% endblock %}
+    </head>
+    <body>
+        <!-- Bootstrap JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+        <header>
+            <!-- Navigation bar -->
+            <nav class="navbar navbar-dark bg-dark">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNavbar" aria-controls="collapseNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="collapseNavbar">
+                        <ul class="navbar-nav">
+                            {% for item in navigation %}
+                            <li class="nav-item">
+                                <a class="nav-link" href={{ url_for(item) }}>{{ item }}</a>
+                            </li>
+                            {% endfor %}
+                            <li class="nav-item drpdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Contact Me</a>
+                                <ul class="dropdown-menu">
+                                    <li class="dropdown-item">Philip Scott Wallace (he/him)</li>
+                                    <li class="dropdown-item">3414 NW Bryce Canyon Ln</li>
+                                    <li class="dropdown-item">Bend, OR 97703</li>
+                                    <li class="dropdown-item">Call me at: <a href="tel:+12108453963">1-210-845-3963</a></li>
+                                    <li class="dropdown-item">Email me at: <a href="mailto:philipswallace1@gmail.com">philipswallace1@gmail.com</a></li>
+                                    <li class="list-group-item">Find me on github: <a href="https://github.com/SkumperDump">https://github.com/SkumperDump</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- Content goes here -->
+        <main class="container">{% block main %}{% endblock %}</main>
+        <footer>MY AWESEOME FOOTER</footer>
+    </body>
 </html>

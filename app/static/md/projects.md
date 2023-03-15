@@ -1,3 +1,21 @@
-- Unreal Engine Game
-- WEBSITES 
-- Computational finance (binbot)
+- Unreal Engine 
+    - C/C++
+    - Makefile configuration
+    - 3D visualization
+    - clangd lsp
+- Blender
+    - Static mesh creation
+    - Skeletal mesh animation
+    - Shader creation
+- Flask
+    - This website
+    - Maybe your website?
+- Angular 
+    - Some experience 
+- Computational Finance 
+    - pandas
+    - sklearn
+    - asset exchange apis 
+- Functional Programming 
+    - Haskell
+    - Mandelbrot set

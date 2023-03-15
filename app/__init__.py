@@ -10,11 +10,14 @@ def homepage():
     # markdown -> html
     # need to use {{FOO | safe}} in jinja template to prevent auto-escaping
     content = utils.open_file("app/static/md/index.md")
-    return render_template("index.html", navigation=nav_list, content=markdown.markdown(content))
+    content = markdown.markdown(content)
+    return render_template("index.html", navigation=nav_list, content=content)
 
 @app.route('/projects')
 def projects():
-    return render_template("projects.html", navigation=nav_list)
+    content = utils.open_file("app/static/md/projects.md")
+    content = markdown.markdown(content)
+    return render_template("projects.html", navigation=nav_list, content=content)
 
 @app.route('/blog')
 def blog():

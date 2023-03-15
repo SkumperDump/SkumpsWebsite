@@ -1,12 +1,8 @@
 {% extends "base.html" %}
-
-{% block title %}
-<title>Home Page</title>
-{% endblock %}
+{% block title %}<title>Home Page</title>{% endblock %}
 
 <!-- Content goes here -->
 {% block main %}
-<div>
-  {{ content | safe}}
-</div>
+<h1 class="card-title">Dear Hiring Body,</h1>
+{{ content | safe}}
 {% endblock %}
