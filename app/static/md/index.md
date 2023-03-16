@@ -1,3 +1,5 @@
+# To whom it may concern,
+
 First off, my name is Scotty! For bureaucratic reasons, I use my legal name. However, I figure you should know what my friends call me! 
 
 Anyways, who am I? Well, I started out as a chemist that used to want to be an aerospace engineer. I also had a long childhood fixation with architecture. Eventually, I learned that I like to keep things broad, and that the broader my knowledge, the more options I have when it comes to solving a given problem.
