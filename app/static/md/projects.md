@@ -1,17 +1,15 @@
 - Unreal Engine 
     - C/C++
-    - Makefile configuration
+    - CMake
+    - clangd
     - 3D visualization
-    - clangd lsp
 - Blender
-    - Static mesh creation
-    - Skeletal mesh animation
-    - Shader creation
+    - Mesh creation
+    - Animation & Rigging
+    - Principled BSDF
 - Flask
     - This website
     - Maybe your website?
-- Angular 
-    - Some experience 
 - Computational Finance 
     - pandas
     - sklearn
