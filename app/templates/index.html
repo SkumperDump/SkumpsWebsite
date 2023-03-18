@@ -3,5 +3,18 @@
 
 <!-- Content goes here -->
 {% block main %}
+
+<!-- Style settings for this content -->
+<style>
+h1 {
+    padding: 0 1rem 0 1rem;
+    background-color: lightsalmon;
+    border-style: solid;
+    border-width: 0 medium medium 0;
+}
+</style>
+
+<!-- safe is used here to indicate that jinja can disable auto escaping to read md->html text -->
 {{ content | safe}}
+
 {% endblock %}

@@ -35,16 +35,6 @@
                             {% for item in navigation %}
                             <li class="nav-item"><a class="nav-link" href={{ url_for(item) }}>{{ item }}</a></li>
                             {% endfor %}
-                            <li class="nav-item drpdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Contact Me</a>
-                                <ul class="dropdown-menu">
-                                    <li class="dropdown-item">Philip Scott Wallace (he/him)</li>
-                                    <li class="dropdown-item">3414 NW Bryce Canyon Ln</li>
-                                    <li class="dropdown-item">Bend, OR 97703</li>
-                                    <li class="dropdown-item">Call me at: <a href="tel:+12108453963">1-210-845-3963</a></li>
-                                    <li class="dropdown-item">Email me at: <a href="mailto:philipswallace1@gmail.com">philipswallace1@gmail.com</a></li>
-                                    <li class="dropdown-item">Find me on github: <a href="https://github.com/SkumperDump">https://github.com/SkumperDump</a></li>
-                                </ul>
                             </li>
                         </ul>
                     </div>
@@ -56,6 +46,11 @@
         <!-- Content goes here -->
         <main class="container">{% block main %}{% endblock %}</main>
 
-        <footer class="container-fluid">MY AWESEOME FOOTER</footer>
+        <footer class="container-fluid">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Contact Me</a>
+            <ul class="dropdown-menu">
+                <!-- safe to allow html string to be rendered  -->
+                {{ contactInfo | safe }}
+        </footer>
     </body>
 </html>
