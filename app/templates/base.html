@@ -6,7 +6,7 @@
         <link href="../static/style.css" rel="stylesheet">
 
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
 
         <!-- Additoinal meta info defined in child templates -->
         <!-- {% block meta %}{% endblock %} -->
@@ -18,16 +18,17 @@
     <body>
 
         <header>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Mount_Bachelor_closeup.jpg/1024px-Mount_Bachelor_closeup.jpg" width="auto" height="auto" alt="Mountains">
+            <!-- Navigation bar -->
+            <nav>
+                <ul>
+                    {% for item in navigation %}
+                    <li><a href={{ url_for(item) }}>{{ item }}</a></li>
+                    {% endfor %}
+                </ul>
+            </nav>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Mount_Bachelor_closeup.jpg/1024px-Mount_Bachelor_closeup.jpg" alt="Mountains">
+            <h1>Skumps Website</h1>
         </header>
-        <!-- Navigation bar -->
-        <nav>
-            <ul>
-                {% for item in navigation %}
-                <li><a href={{ url_for(item) }}>{{ item }}</a></li>
-                {% endfor %}
-            </ul>
-        </nav>
 
         <!-- Content goes here -->
         <main>{% block main %}{% endblock %}</main>
