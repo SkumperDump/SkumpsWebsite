@@ -1,3 +1,49 @@
-body {
+html {
     font-family: Arial, Helvetica, sans-serif;
 }
+
+body {
+    display: grid;
+    grid-template: 
+    "nav head" 10rem
+    "main main" auto
+    "foot foot" auto;
+}
+
+header {
+    grid-area: head;
+    background-color: #595758;
+}
+
+header > img {
+    height: 100%;
+}
+
+nav {
+    grid-area: nav;
+    background-color: #ffeef2;
+}
+
+main {
+    grid-area: main;
+    background-color: #ffc8fb;
+}
+
+footer {
+    grid-area: foot;
+    background-color: #ff92c2;
+}
+
+ul {
+    list-style-type: none;
+}
+
+:not(main ul){
+    margin: 0;
+    padding: 0;
+}
+
+
+/* palette
+ * 595758, ffeef2, ffe4f3, ffc8fb, ff92c2
+ * */
