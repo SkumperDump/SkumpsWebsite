@@ -1,4 +1,4 @@
-# Hello Future Employer,
+# Hello,
 
 First off, my name is Scotty! For bureaucratic reasons, I use my full legal name on paper. However, I figure you should know what my friends call me! 
 
@@ -10,7 +10,7 @@ Don't get me wrong, problem-solving is and should be challenging. One can quickl
 
 Historically, my approach to solving something hard is by taking multiple passes at the topic to gain insight with each strafe. I find this narrows down the scope of my misunderstanding to the point where the whole subject jumps out at me at once. This requires switching sub-topics constantly and grabbing on to whatever straws grip best.
 
-It can be incredibly hard to pivot to another topic if you have lost track of the steps you took to get to where you are. This requires time spent refamiliarizing oneself with the past and there is no guarantee you will not continue down the wrong path again once you resume.
+It can be incredibly hard to pivot to another topic if you have lost track of the steps you took to get to where you are. This requires time spent re-familiarizing oneself with the past and there is no guarantee you will not continue down the wrong path again once you resume.
 
 I find that an easy solution to these intertwined problem-solving hindrances is to be committed to using unit tests. Therefore, given that I feel this will be a **HUGE** part of my work for you: developing the code you need in a way that is well-documented, efficient, and secure. I will take my time here to explain the benefits of unit testing.
 
@@ -27,4 +27,3 @@ Your tests may also be a reference for other programmers and will hopefully expr
 In a worst-case scenario, this helps keep track of what you have already tried for a given section of code. Thus it is easier to narrow down the exact situations that are causing run-time issues. I find this to be immensely helpful, as no matter what project I am working on, I am keeping track of my code as I write it, and then can hop back into what I was doing, with a degree of certainty that it works, by studying my unit tests.
 
 Unit tests can lead you astray if they are not designed well. An easy way to design a good unit test is to keep it as simple as possible. I find it is much more insightful to write many small tests rather than a few large ones.
-
