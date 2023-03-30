@@ -1,8 +1,9 @@
 import utils
 from flask import (Flask, render_template)
+from pathlib import Path
 
 nav_list = ['homepage', 'projects', 'blog', 'books']
-markdownDir = "app/static/md/{}.md"
+markdownDir = str(Path.home()) + "/SkumpsWebsite/app/static/md/{}.md"
 
 # turns markdown file into string of html
 contactInfo = utils.mdToHtml(markdownDir.format("contact"))
