@@ -1,20 +1,25 @@
-# Projects I Am Working On
-- Unreal Engine 
+# Things I Am Working On
+
+- Game Development
+    - Unreal Engine
     - C/C++
     - CMake
     - clangd
-    - 3D visualization
+    - 3D Visualization
+    - Enhanced Input
 - Blender
-    - Mesh creation
+    - Precision Modeling
     - Animation & Rigging
     - Principled BSDF
-- Flask
-    - This website
-    - Maybe your website?
+- Web Development
+    - Flask WSGI
+    - Jinja Templating 
+    - Styling With Sass
 - Computational Finance 
     - pandas
-    - sklearn
-    - asset exchange apis 
+    - scikit-learn
+    - matplotlib
+    - Asset Exchange APIs 
 - Functional Programming 
     - Haskell
     - Mandelbrot set

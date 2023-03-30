@@ -23,7 +23,8 @@ def projects():
 
 @app.route('/blog')
 def blog():
-    return render_template("blog.html", navigation=nav_list, contactInfo=contactInfo)
+    content = utils.mdToHtml(markdownDir.format("blog"))
+    return render_template("blog.html", navigation=nav_list, content=content, contactInfo=contactInfo)
 
 @app.route('/books')
 def books():
