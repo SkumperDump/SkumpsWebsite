@@ -1,25 +1,21 @@
 # Things I Am Working On
 
 - Game Development
-    - Unreal Engine
-    - C/C++
-    - CMake
-    - clangd
-    - 3D Visualization
-    - Enhanced Input
-- Blender
-    - Precision Modeling
-    - Animation & Rigging
-    - Principled BSDF
+    - Unreal Engine 5
+        - C/C++
+    - Blender
+        - Precision Modeling
+        - Animation & Rigging
+        - Principled BSDF
 - Web Development
-    - Flask WSGI
-    - Jinja Templating 
-    - Styling With Sass
+    - Flask 
+    - Angular
+    - Sass
 - Computational Finance 
-    - pandas
-    - scikit-learn
-    - matplotlib
-    - Asset Exchange APIs 
+    - Trading Algorithms & Data Visualization
+        - pandas
+        - scikit-learn
+        - matplotlib
+        - Asset Exchange APIs 
 - Functional Programming 
     - Haskell
-    - Mandelbrot set
